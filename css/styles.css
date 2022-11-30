@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+
+*{
+    margin: 0.2px;
+    padding: 1px; 
+    box-sizing: border-box;
+    background-color: rgba(0, 255, 255, 0.027);
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+a{
+    color: rgba(234, 0, 255, 0.479);
+    text-decoration: none;
+}
+
+.icon-logo{
+    background-image: url(../icon.png);
+    background-size: cover;
+    background-position: center;
+    height: 110px;
+    width: 110px;
+    float: left;
+}
+
+.nav{
+    color: aqua;  /* no funciona  */
+}
+
+.card{
+    position: relative;
+    display: inline-block;
+    height: 400px;
+    width: 300px;
+    border: 1px solid black;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box-map{
+    display: inline-block;
+    padding: 1em;
+}
+
