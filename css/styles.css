@@ -459,6 +459,9 @@ body {
     'form map'
     'comentario map' ;
     padding-top: 3rem;
+    background-color: rgba(0, 255, 255, 0.884);
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .maps{
