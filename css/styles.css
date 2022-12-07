@@ -404,10 +404,39 @@ body {
 
 /* WEB MANGAS */
 
+.div_main_mangas{
+  background-color: rgba(0, 255, 255, 0.685);
+  justify-content: space-between;
+  margin: 0px;
+}
 .div1-manga{
   padding-top: 3rem;
+  grid-template-areas: 
+  'ibrea ibrea panini panini'
+  'ibrea ibrea panini panini'
+  'ovnipress ovnipress ovnipress ovnipress';
+
 }
 
+.div-ibrea{
+  grid-area: ibrea;
+  max-width: 500px;
+}
+
+.div-panini{
+  grid-area: panini;
+  max-width: 500px;
+}
+
+.div-ovnipress{
+  grid-area: ovnipress;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.h1-ibrea .h1-panini .h1-ovnipress{
+  font-size: 2px;
+}
 
 /* WEB COMICS */
 
