@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0; 
     box-sizing: border-box;
+
 }
 body {
+  /* background-image: url(../images/fondo.jpg); */
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #fff;
     height: 200vh;
@@ -349,10 +351,11 @@ body {
 .grid-container{
     display: grid;
     margin: 0px;
-    background-color: rgba(0, 255, 255, 0.103);
+    background-color: rgba(0, 255, 255, 0.685);
     grid-template-columns: 100px 20% 40% 100px;
     grid-template-rows: auto auto auto auto;
     justify-content: space-between;
+    padding-top: 5rem;
 }
 .cards{
     width: 90%;
@@ -399,12 +402,34 @@ body {
     padding: 0.4em;
 }
 
+/* WEB MANGAS */
+
+.div1-manga{
+  padding-top: 3rem;
+}
+
+
+/* WEB COMICS */
+
+.div-comics{
+  padding-top: 3rem;
+}
+
+/* MERCHADASING */
+
+.div-mercha{
+  padding-top: 3rem;
+}
+
+
             /* CONTACTO  */
 .conteiner_grid_contacto{
     display: grid;
     grid-template-areas: 
-    'form map map'
-    'form map map' ;
+    'form map'
+    'form map'
+    'comentario map' ;
+    padding-top: 3rem;
 }
 
 .maps{
@@ -414,6 +439,11 @@ body {
 .forms_contactos{
     grid-area: form;
 }
+
+.comentario{
+  grid-area: comentario;
+}
+
      /*    fotter    */
 .icon-wsp{
     width: 35px;
