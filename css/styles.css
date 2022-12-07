@@ -434,8 +434,8 @@ body {
   grid-gap: 10px;
 }
 
-.h1-ibrea .h1-panini .h1-ovnipress{
-  font-size: 2px;
+.h3-ibrea .h3-panini .h3-ovnipress{
+  font-size: 14px;
 }
 
 /* WEB COMICS */
@@ -453,28 +453,80 @@ body {
 
             /* CONTACTO  */
 .conteiner_grid_contacto{
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-areas: 
     'form map'
-    'form map'
-    'comentario map' ;
+    'form map' ;
     padding-top: 3rem;
     background-color: rgba(0, 255, 255, 0.884);
     margin-left: 3%;
     margin-right: 3%;
+    background-attachment: fixed;
+    background-size: auto;
+}
+
+.formulario{
+  font-size: 19px;
+  background-image: url(../images/fondo.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  max-height: 700px;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.form{
+  width: 50%;
+  min-width: 300px;
+  max-height: 90%;
+  background: rgba(0, 0, 0, 0.491);
+  margin: auto;
+  margin-top: 40px;
+  padding: 20px;
+  color: #2755c2;
+}
+
+.form_input{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #2756c265;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.form_text{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #2756c2;;
+}
+
+.form_text::placeholder{
+  font-size: 14px;
 }
 
 .maps{
     grid-area: map;
+    width: 500px;
+    height: 400px;
 }
 
-.forms_contactos{
+.formulario{
     grid-area: form;
+    padding-left: 20px;
 }
 
-.comentario{
-  grid-area: comentario;
-}
+
 
      /*    fotter    */
 .icon-wsp{
@@ -590,13 +642,14 @@ body {
         grid-template-areas: 
         'form form'
         ' map map' ;
+        margin: 30px;
     }
     .maps{
         grid-area: map;
         display: flex;
-        width: 300px;
-        height: 300px;
-        margin: 0;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
         margin-top: 0 80px;
     }
     
@@ -657,9 +710,9 @@ body {
     .maps{
         grid-area: map;
         display: flex;
-        width: 300px;
-        height: 300px;
-        margin: 0;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
         margin-top: 0 80px;
     }
     
