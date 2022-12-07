@@ -575,7 +575,7 @@ body {
     .grid-container{
         display: grid;
         margin: 0 0;
-        background-color: rgba(0, 255, 255, 0.103);
+        background-color: rgba(0, 255, 255, 0.685);
         grid-template-columns: 90%;
         grid-template-rows: auto auto;
         justify-content: space-between;
@@ -727,7 +727,7 @@ body {
     .grid-container{
         display: grid;
         margin: 0 0;
-        background-color: rgba(0, 255, 255, 0.103);
+        background-color: rgba(0, 255, 255, 0.685);
         grid-template-columns: 100px 20% 40% 100px;
         grid-template-rows: auto auto;
         justify-content: space-between;
