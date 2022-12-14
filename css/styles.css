@@ -442,12 +442,14 @@ body {
 /* WEB COMICS */
 
 .div-comics{
+  background-color: rgba(0, 255, 255, 0.685);
   padding-top: 3rem;
+  flex-flow: row wrap;
 }
 
 
 .cardComics {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -490,7 +492,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-.cardComics .cardComics__details .cardComics__details__center h1 {
+.cardComics .cardComics__details .cardComics__details__center h4 {
   margin: 0;
   padding: 0;
   color: #ff3636;
