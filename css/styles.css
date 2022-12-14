@@ -414,6 +414,9 @@ body {
   grid-template-areas: 
   'ibrea ibrea panini panini'
   'ibrea ibrea panini panini'
+  'ibrea ibrea panini panini'
+  'ibrea ibrea panini panini'
+  'ovnipress ovnipress ovnipress ovnipress'
   'ovnipress ovnipress ovnipress ovnipress';
 
 }
@@ -492,7 +495,7 @@ body {
 }
 .cardComics .cardComics__details .cardComics__details__center {
   padding: 20px;
-  text-align: center;
+  /* text-align: center; */
   background: #fff;
   position: absolute;
   top: 50%;
@@ -533,7 +536,7 @@ body {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  text-align: center;
+  /* text-align: center; */
   transform: .5s;
 }
 .cardComics .cardComics__details .cardComics__details__center ul li a:hover {
