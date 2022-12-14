@@ -484,11 +484,11 @@ body {
   transition: .5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
-
+  overflow: auto;
 }
 .cardComics:hover .cardComics__details {
   transform: perspective(2000px) rotateY(0deg);
-  
+  overflow-y: auto;
 }
 .cardComics .cardComics__details .cardComics__details__center {
   padding: 20px;
@@ -497,7 +497,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  
+
 }
 .cardComics .cardComics__details .cardComics__details__center h4 {
   margin: 0;
