@@ -500,7 +500,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-
+  height: 80%;
+  overflow: auto;
 }
 .cardComics .cardComics__details .cardComics__details__center h4 {
   margin: 0;
@@ -515,7 +516,7 @@ body {
   color: #262626;
 }
 .cardComics .cardComics__details .cardComics__details__center p {
-  margin: 10px 0;
+  /* margin: 10px 0; */
   padding: 0;
   color: #262626;
 }
