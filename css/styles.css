@@ -386,7 +386,7 @@ body {
     background-size: cover;
     border-radius: 1em 1em 0 0;
 }
-.card_cta{
+.card__cta{
     margin-left: 2em;
     background-color: slateblue;
     color: white;
