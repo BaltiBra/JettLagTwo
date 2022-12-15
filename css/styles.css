@@ -381,7 +381,7 @@ body {
 .card__img{
     overflow: hidden;
     height: 400px;
-    background-image: url(../images/ej1.png);
+    background-image: url(../images/1.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 1em 1em 0 0;
@@ -717,7 +717,7 @@ footer{
     .card__img{
         overflow: hidden;
         height: 200px;
-        background-image: url(../images/ej1.png);
+        background-image: url(../images/1.jpg);
         background-position: center;
         background-size: cover;
         border-radius: 1em 1em 0 0;
@@ -869,7 +869,7 @@ footer{
     .card__img{
         overflow: hidden;
         height: 200px;
-        background-image: url(../images/ej1.png);
+        background-image: url(../images/1.jpg);
         background-position: center;
         background-size: cover;
         border-radius: 1em 1em 0 0;
