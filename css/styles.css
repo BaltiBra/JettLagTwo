@@ -373,14 +373,14 @@ body {
     width: 100%;
     flex-direction: column;
     background-color: rgba(247, 214, 176, 0);
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 1em;
     justify-content: center;
     overflow: hidden;
 }
 .card__img{
     overflow: hidden;
-    height: 400px;
+    height: 300px;
     background-image: url(../images/ej1.png);
     background-position: center;
     background-size: cover;
@@ -685,10 +685,10 @@ footer{
         justify-content: space-between;
         overflow: hidden;
     }
-    .ultimas_noticias{
+    .ultimas__noticias{
         display: grid;
-        width: 90%;
-        padding: 60px 0;
+        width: 70%;
+        padding: 10px 0;
     }
     .h2_ej{
         display: flex;
@@ -837,7 +837,7 @@ footer{
         justify-content: space-between;
         overflow: hidden;
     }
-    .ultimas_noticias{
+    .ultimas__noticias{
         display: grid;
         width: 90%;
         padding: 60px 0;
