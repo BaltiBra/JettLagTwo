@@ -10,7 +10,8 @@ body {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #fff;
     height: 200vh;
-    position: relative; }
+    position: relative;
+    max-height: 1440px; }
     body:before {
       content: "";
       position: absolute;
@@ -68,9 +69,10 @@ body {
     margin-bottom: 0px;
     z-index: 1999;
     position: absolute;
-    top: 1rem;
+    top: 0rem;
     background-color: #ff4654;
-    width: 100%; }
+    width: 100%;
+    border-radius: 10px; }
     .site-navbar.transparent {
       background: transparent; }
     .site-navbar.absolute {
@@ -356,6 +358,7 @@ body {
     grid-template-rows: auto auto auto auto;
     justify-content: space-between;
     padding-top: 5rem;
+    border-radius: 10px
 }
 .cards{
     width: 90%;
@@ -446,6 +449,7 @@ body {
   padding-top: 3rem;
   flex-flow: row wrap;
   align-content: space-between;
+  border-radius: 10px
 }
 
 
@@ -548,6 +552,7 @@ body {
 
 .div-mercha{
   padding-top: 3rem;
+  border-radius: 10px
 }
 
 
@@ -564,6 +569,7 @@ body {
     margin-right: 3%;
     background-attachment: fixed;
     background-size: auto;
+    border-radius: 10px
 }
 
 .formulario{
