@@ -354,12 +354,26 @@ body {
     display: grid;
     margin: 0px;
     background-color: rgba(0, 255, 255, 0.685);
-    grid-template-columns: 100px 20% 40% 100px;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
     justify-content: space-between;
     padding-top: 5rem;
-    border-radius: 10px
+    border-radius: 0px 0px 10px 10px;
 }
+
+.encargos{
+    padding-left: 30px;
+    justify-items: center;
+    flex-flow: column;
+}
+
+.encargos_img1{
+    background-image: url(/images/encargos.jpg);
+    height: 300px;
+    width: 370px;
+    background-size: cover;
+}
+
 .cards{
     width: 90%;
     max-width: 1200px;
@@ -691,11 +705,6 @@ footer{
         justify-content: space-between;
         overflow: hidden;
     }
-    .ultimas__noticias{
-        display: grid;
-        width: 70%;
-        padding: 10px 0;
-    }
     .h2_ej{
         display: flex;
         justify-content: center;
@@ -838,15 +847,10 @@ footer{
         display: grid;
         margin: 0 0;
         background-color: rgba(0, 255, 255, 0.685);
-        grid-template-columns: 100px 20% 40% 100px;
+        /* grid-template-columns: 100px 20% 40% 100px; */
         grid-template-rows: auto auto;
         justify-content: space-between;
         overflow: hidden;
-    }
-    .ultimas__noticias{
-        display: grid;
-        width: 90%;
-        padding: 60px 0;
     }
     .h2_ej{
         display: flex;
