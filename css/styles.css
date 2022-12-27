@@ -569,7 +569,8 @@ body {
     margin-right: 3%;
     background-attachment: fixed;
     background-size: auto;
-    border-radius: 10px
+    border-radius: 10px;
+    justify-content: space-around;
 }
 
 .formulario{
@@ -587,7 +588,7 @@ body {
 .form{
   width: 50%;
   min-width: 300px;
-  max-height: 90%;
+  max-height: 100%;
   background: rgba(0, 0, 0, 0.491);
   margin: auto;
   margin-top: 40px;
@@ -614,7 +615,8 @@ body {
   padding: 10px;
   outline: none;
   border: none;
-  border-bottom: 2px solid #2756c2;;
+  border-bottom: 2px solid #2756c2;
+  color: #007bff;
 }
 
 .form_text::placeholder{
@@ -624,7 +626,8 @@ body {
 .maps{
     grid-area: map;
     width: 500px;
-    height: 400px;
+    height: 500px;
+    padding-top: 30px;
 }
 
 .formulario{
@@ -632,6 +635,11 @@ body {
     padding-left: 20px;
 }
 
+.enviar{
+  border: 2px solid #2756c2a6;
+  background-color: cornflowerblue;
+  font-family: cursive;
+}
 
 
      /*    fotter    */
