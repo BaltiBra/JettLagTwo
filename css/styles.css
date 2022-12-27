@@ -360,7 +360,7 @@ body {
     padding-top: 5rem;
     border-radius: 10px
 }
-.cards{
+.cardsIndex{
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -708,7 +708,7 @@ footer{
         display: flex;
         justify-content: center;
     }
-    .cards{
+    .Index{
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
@@ -860,7 +860,7 @@ footer{
         display: flex;
         justify-content: center;
     }
-    .cards{
+    .Index{
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
@@ -942,10 +942,10 @@ footer{
     opacity: 0;
 }
 
-#card1{
-    animation: entryCards 0.5s ease 3s forwards;
+/* #card1{
+    animation: entryIndex 0.5s ease 3s forwards;
     opacity: 0;
-}
+} */
 
 @keyframes entryHeader{
     from{
@@ -968,14 +968,14 @@ footer{
         opacity: 1;
         }
 }
-@keyframes entryCards {
+/* @keyframes entryIndex {
     from { transform: translateY(-1500px);
             opacity: 0;
     }
     to { transform: translateY(0);
         opacity: 1;
     }
-}
+} */
 
 
  
