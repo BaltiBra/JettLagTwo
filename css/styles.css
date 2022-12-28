@@ -353,7 +353,7 @@ body {
 .grid-container{
     display: grid;
     margin: 0px;
-    background-color: rgba(0, 255, 255, 0.685);
+    background-color: rgba(0, 255, 255, 0.33);
     grid-template-columns: 50px 40% 50% 50px;
     grid-template-rows: auto auto auto auto;
     justify-content: space-between;
@@ -435,6 +435,7 @@ body {
 
 .ultimas__noticias--img{
   width: 500px;
+  height: 400px;
 }
 
 .ultimas__noticias--title{
@@ -729,27 +730,23 @@ footer{
     .grid-container{
         display: grid;
         margin: 0 0;
-        background-color: rgba(0, 255, 255, 0.685);
-        grid-template-columns: 90%;
+        background-color: rgba(0, 255, 255, 0.33);
+        grid-template-columns: 98%;
         grid-template-rows: auto auto;
         justify-content: space-between;
         overflow: hidden;
     }
-    .ultimas__noticias{
-        display: grid;
-        width: 70%;
-        padding: 10px 0;
-    }
-    .h2_ej{
+
+      .cardsIndex{
         display: flex;
-        justify-content: center;
-    }
-    .Index{
+        flex-flow: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
         width: 90%;
         max-width: 1200px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         padding: 60px 0;
         gap: 2em;
     }
@@ -774,7 +771,7 @@ footer{
     }
     .card__img{
       overflow: hidden;
-      height: 250px;
+      height: 550px;
       background-position: center;
       background-size: cover;
     }
@@ -789,6 +786,30 @@ footer{
         margin: 0 auto;
         margin-top: auto;
     }
+
+
+    .centrar__index{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .ultimas__noticias{
+      display: flex;
+      flex-flow: column ;
+    }
+    
+    .ultimas__noticias--img{
+      display: flex;
+      padding-left: 1rem;
+      width: 99%;
+      height: 90%;
+    }
+
+
     .card__texts{
         font-size: small;
         padding: 0.4em;
@@ -843,6 +864,25 @@ footer{
         height: 70px;
         justify-items: auto;
     }
+
+    .centrar__index{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding-top: 1rem;
+    }
+    .ultimas__noticias{
+      display: flex;
+      flex-flow: column ;
+    }
+    
+
+    .ultimas__noticias--img{
+      width: 400px;
+      height: 300px;
+    }
+
+
     .nav-ul{
         display: flex;
         justify-content: space-between;
@@ -886,7 +926,7 @@ footer{
     .grid-container{
         display: grid;
         margin: 0 0;
-        background-color: rgba(0, 255, 255, 0.685);
+        background-color: rgb(0 255 255 / 33%);
         grid-template-columns: 100px 20% 40% 100px;
         grid-template-rows: auto auto;
         justify-content: space-between;
