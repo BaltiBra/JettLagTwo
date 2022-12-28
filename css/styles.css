@@ -794,7 +794,7 @@ footer{
       align-items: center;
       padding-top: 1rem;
       padding-bottom: 2rem;
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     .ultimas__noticias{
@@ -804,7 +804,6 @@ footer{
     
     .ultimas__noticias--img{
       display: flex;
-      padding-left: 1rem;
       width: 99%;
       height: 90%;
     }
