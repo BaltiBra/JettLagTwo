@@ -354,7 +354,7 @@ body {
     display: grid;
     margin: 0px;
     background-color: rgba(0, 255, 255, 0.685);
-    grid-template-columns: 100px 20% 40% 100px;
+    grid-template-columns: 50px 40% 50% 50px;
     grid-template-rows: auto auto auto auto;
     justify-content: space-between;
     padding-top: 5rem;
@@ -370,25 +370,32 @@ body {
     gap: 2em;
 }
 .card{
-    padding-bottom: 2.5em;
     display: flex;
-    height: 400px;
+    height: 500px !important;
     width: 100%;
     flex-direction: column;
-    background-color: rgba(247, 214, 176, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 1em;
+    background-color: rgb(160 181 251 / 72%) !important;
+    border: 0px solid rgba(0, 0, 0, 0) !important;
+    border-radius:0px 0px 1rem 1rem !important;
     justify-content: center;
     overflow: hidden;
 }
-.card__img{
+.div__card__img{
     overflow: hidden;
-    height: 300px;
-    background-image: url(../images/ej1.png);
+    height: 100%;
+    width: 500px;
     background-position: center;
     background-size: cover;
-    border-radius: 1em 1em 0 0;
 }
+
+.card__img{
+  overflow: hidden;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+}
+
+
 .card__cta{
     margin-left: 2em;
     background-color: slateblue;
@@ -401,8 +408,37 @@ body {
     margin-top: auto;
 }
 .card__texts{
+    display: flex;
+    flex-direction: column;
     font-size: small;
     padding: 0.4em;
+    align-items: center;
+    
+}
+
+.card__btn{
+  height: 40px;
+  width: 30px;
+  background-color: #212529;
+}
+
+.centrar__index{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+.ultimas__noticias{
+  display: flex;
+  flex-flow: column ;
+}
+
+.ultimas__noticias--img{
+  width: 500px;
+}
+
+.ultimas__noticias--title{
+  align-items: center;
 }
 
 /* WEB MANGAS */
@@ -725,17 +761,22 @@ footer{
         flex-direction: column;
         background-color: rgba(247, 214, 176, 0);
         border: 1px solid black;
-        border-radius: 1em;
+        border-radius:0px 0px 1rem 1rem !important;
         justify-content: center;
         overflow: hidden;
     }
-    .card__img{
+    .div__card__img{
         overflow: hidden;
         height: 200px;
-        background-image: url(../images/ej1.png);
         background-position: center;
         background-size: cover;
         border-radius: 1em 1em 0 0;
+    }
+    .card__img{
+      overflow: hidden;
+      height: 250px;
+      background-position: center;
+      background-size: cover;
     }
     .card__cta{
         margin-left: 2em;
@@ -877,17 +918,22 @@ footer{
         flex-direction: column;
         background-color: rgba(247, 214, 176, 0);
         border: 1px solid black;
-        border-radius: 1em;
+        border-radius:0px 0px 1rem 1rem !important;
         justify-content: center;
         overflow: hidden;
     }
-    .card__img{
+    .div__card__img{
         overflow: hidden;
         height: 200px;
-        background-image: url(../images/ej1.png);
         background-position: center;
         background-size: cover;
         border-radius: 1em 1em 0 0;
+    }
+    .card__img{
+      overflow: hidden;
+      height: 450px;
+      background-position: center;
+      background-size: cover;
     }
     .card__cta{
         margin-left: 2em;
