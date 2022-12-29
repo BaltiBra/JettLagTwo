@@ -610,6 +610,7 @@ body {
 
 .item-container {
     background-color: #fff;
+    font-family: "Comic Sans MS", sans-serif; 
     width: 20rem;
     margin: 1rem;
     padding: 1rem;
@@ -624,7 +625,7 @@ body {
 }
 
 .top-left-logo {
-    width: 60px;
+    width: 50px;
     margin-left: 1rem;
     display: flex;
     justify-content: center;
@@ -642,11 +643,13 @@ body {
 
 .main-item {
     width: 100%;
-    display: block;
+    display: flex;
     margin: 0 auto;
+    flex-flow: column !important;
 }
 
 .item-heading {
+    font-family:  "Comic Sans MS", sans-serif !important;
     text-transform: capitalize;
 }
 
