@@ -354,11 +354,11 @@ body {
     display: grid;
     margin: 0px;
     background-color: rgba(0, 255, 255, 0.33);
-    grid-template-columns: 50px 40% 50% 50px;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 47% 50%;
+    grid-template-rows: auto auto;
     justify-content: space-between;
     padding-top: 5rem;
-    border-radius: 10px
+    border-radius: 10px;
 }
 .cardsIndex{
     width: 90%;
@@ -434,8 +434,8 @@ body {
 }
 
 .ultimas__noticias--img{
-  width: 500px;
-  height: 400px;
+  width: 70%;
+  height: 90%;
 }
 
 .ultimas__noticias--title{
@@ -841,159 +841,315 @@ footer{
     /* TERMINA CONTACTO*/
 }
 
-    /* TABLET */
-@media only screen and (min-width: 601px) and (max-width: 1199px){
-    *{
-        margin: 0;
-        padding: 0; 
-        box-sizing: content-box;
-    }
-    .header{
-        background-color: #ff4654;
-        align-items: center;
-        height: auto;
-        padding: 0 5%;
-        overflow: hidden;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .icon-head{
-        width: 70px;
-        height: 70px;
-        justify-items: auto;
-    }
 
-    .centrar__index{
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      padding-top: 1rem;
-    }
-    .ultimas__noticias{
-      display: flex;
-      flex-flow: column ;
-    }
-    
+@media only screen and (min-width: 601px) and (max-width: 780px){
+  *{
+    margin: 0px;
+    padding: 0px;
+  box-sizing: content-box;   
+  }
 
-    .ultimas__noticias--img{
-      width: 400px;
-      height: 300px;
-    }
-
-
-    .nav-ul{
-        display: flex;
-        justify-content: space-between;
-    }
-    .li-head{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-    }
-    .anchor-nav{
-        text-decoration: none;
-        font-family: "Comic Sans MS", sans-serif; 
-        color: #4ac9e6; ;  
-    }
-    /* CONTACTOOOO */
-    .conteiner_grid_contacto{
-        display: grid;
-        justify-content: center;
-        grid-template-areas: 
-        'form form'
-        ' map map' ;
-    }
-    .maps{
-        grid-area: map;
-        display: flex;
-        width: 500px;
-        height: 500px;
-        margin: 20px;
-        margin-top: 0 80px;
-    }
-    
-    .forms_contactos{
-        grid-area: form;
-        display: flex;
-        margin: 0;
-        margin-bottom: 0 20px;
-    }
-    /* TERMINA CONTACTO*/
-    /* MAIN */
-    .grid-container{
-        display: grid;
-        margin: 0 0;
-        background-color: rgb(0 255 255 / 33%);
-        grid-template-columns: 100px 20% 40% 100px;
-        grid-template-rows: auto auto;
-        justify-content: space-between;
-        overflow: hidden;
-    }
-    .ultimas__noticias{
-        display: grid;
-        width: 90%;
-        padding: 60px 0;
-    }
-    .h2_ej{
-        display: flex;
-        justify-content: center;
-    }
-    .Index{
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        padding: 60px 0;
-        gap: 2em;
-    }
-    .card{
-        padding-bottom: 2.5em;
-        display: flex;
-        height: 120px;
-        width: 100%;
-        flex-direction: column;
-        background-color: rgba(247, 214, 176, 0);
-        border: 1px solid black;
-        border-radius:0px 0px 1rem 1rem !important;
-        justify-content: center;
-        overflow: hidden;
-    }
-    .div__card__img{
-        overflow: hidden;
-        height: 200px;
-        background-position: center;
-        background-size: cover;
-        border-radius: 1em 1em 0 0;
-    }
-    .card__img{
-      overflow: hidden;
-      height: 450px;
-      background-position: center;
-      background-size: cover;
-    }
-    .card__cta{
-        margin-left: 2em;
-        background-color: slateblue;
-        color: rgb(219, 23, 23);
-        text-decoration: none;
-        padding: 0.4em 1em;
-        width: 50x;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: auto;
-    }
-    .card__texts{
-        font-size: small;
-        padding: 0.4em;
-    }
+.header{
+    background-color: #ff4654;
+    align-items: center;
+    height: auto;
+    padding: 0 5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }
+.icon-head{
+    width: 70px;
+    height: 70px;
+    justify-items: auto;
+}
+
+.centrar__index{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+.ultimas__noticias{
+  display: flex;
+  flex-flow: column ;
+  width: 90%;
+  padding-left: 50px;
+  gap: 3rem;
+}
+
+
+.ultimas__noticias--img{
+  width: 70% !important;
+  height: 90% !important;
+
+}
+
+
+.nav-ul{
+    display: flex;
+    justify-content: space-between;
+}
+.li-head{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.anchor-nav{
+    text-decoration: none;
+    font-family: "Comic Sans MS", sans-serif; 
+    color: #4ac9e6; ;  
+}
+/* CONTACTOOOO */
+.conteiner_grid_contacto{
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    'form form'
+    ' map map' ;
+}
+.maps{
+    grid-area: map;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    margin-top: 0 80px;
+}
+
+.forms_contactos{
+    grid-area: form;
+    display: flex;
+    margin: 0;
+    margin-bottom: 0 20px;
+}
+/* TERMINA CONTACTO*/
+/* MAIN */
+.grid-container{
+  display: grid;
+  margin: 0 0;
+  background-color: rgba(0, 255, 255, 0.33);
+  grid-template-columns: 98%;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.cardsIndex{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  gap: 2em;
+}
+
+.Index{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 60px 0;
+    gap: 2em;
+}
+.card{
+    padding-bottom: 2.5em;
+    display: flex;
+    height: var(--bs-card-height) !important;
+    width: 75% !important;
+    flex-direction: column;
+    background-color: rgba(247, 214, 176, 0);
+    border: 1px solid black !important;
+    border-radius:0px 0px 1rem 1rem !important;
+    justify-content: center;
+    overflow: hidden;
+}
+.div__card__img{
+    overflow: hidden;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1em 1em 0 0;
+}
+.card__img{
+  overflow: hidden;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+}
+.card__cta{
+    margin-left: 2em;
+    background-color: slateblue;
+    color: rgb(219, 23, 23);
+    text-decoration: none;
+    padding: 0.4em 1em;
+    width: 50x;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: auto;
+}
+.card__texts{
+    font-size: small;
+    padding: 0.4em;
+}
+}
+
+
+    /* TABLET */
+    @media only screen and (min-width: 781px) and (max-width: 1199px){
+      *{
+          margin: 0;
+          padding: 0; 
+          box-sizing: content-box;
+      }
+      .header{
+          background-color: #ff4654;
+          align-items: center;
+          height: auto;
+          padding: 0 5%;
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+      }
+      .icon-head{
+          width: 70px;
+          height: 70px;
+          justify-items: auto;
+      }
+  
+      .centrar__index{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding-top: 1rem;
+      }
+      .ultimas__noticias{
+        display: flex;
+        flex-flow: column ;
+      }
+      
+  
+      .ultimas__noticias--img{
+        width: 430px;
+        height: 520px;
+      }
+  
+  
+      .nav-ul{
+          display: flex;
+          justify-content: space-between;
+      }
+      .li-head{
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          margin: 5px;
+      }
+      .anchor-nav{
+          text-decoration: none;
+          font-family: "Comic Sans MS", sans-serif; 
+          color: #4ac9e6; ;  
+      }
+      /* CONTACTOOOO */
+      .conteiner_grid_contacto{
+          display: grid;
+          justify-content: center;
+          grid-template-areas: 
+          'form form'
+          ' map map' ;
+      }
+      .maps{
+          grid-area: map;
+          display: flex;
+          width: 500px;
+          height: 500px;
+          margin: 20px;
+          margin-top: 0 80px;
+      }
+      
+      .forms_contactos{
+          grid-area: form;
+          display: flex;
+          margin: 0;
+          margin-bottom: 0 20px;
+      }
+      /* TERMINA CONTACTO*/
+      /* MAIN */
+      .grid-container{
+          display: grid;
+          margin: 0 0;
+          background-color: rgb(0 255 255 / 33%);
+          grid-template-columns: 51% 50%;
+          grid-template-rows: auto auto;
+          justify-content: space-between;
+          overflow: hidden;
+      }
+      .ultimas_noticias{
+          display: grid;
+          width: 90%;
+          padding: 60px 0;
+      }
+      .h2_ej{
+          display: flex;
+          justify-content: center;
+      }
+      .cards{
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          padding: 60px 0;
+          gap: 2em;
+      }
+      .card{
+          padding-bottom: 2.5em;
+          display: flex;
+          height: 120px;
+          width: 100%;
+          flex-direction: column;
+          background-color: rgba(247, 214, 176, 0);
+          border: 1px solid black;
+          border-radius: 1em;
+          justify-content: center;
+          overflow: hidden;
+      }
+      .card__img{
+          overflow: hidden;
+          height: 100%;
+          background-position: center;
+          background-size: cover;
+          border-radius: 0px;
+      }
+      .card__cta{
+          margin-left: 2em;
+          background-color: slateblue;
+          color: rgb(219, 23, 23);
+          text-decoration: none;
+          padding: 0.4em 1em;
+          width: 50x;
+          text-align: center;
+          margin: 0 auto;
+          margin-top: auto;
+      }
+      .card__texts{
+          font-size: small;
+          padding: 0.4em;
+      }
+  }
 
    /* ANIMATION */
 
-.header {
+/* .header {
     animation: entryHeader 1s ease;
 }
 
@@ -1025,14 +1181,14 @@ footer{
 #anchor-nav-5{
     animation:entryHeader 0.5s ease 1.3s forwards;
     opacity: 0;
-}
+} */
 
 /* #card1{
     animation: entryIndex 0.5s ease 3s forwards;
     opacity: 0;
 } */
 
-@keyframes entryHeader{
+/* @keyframes entryHeader{
     from{
         transform: translateY(-500px);
         opacity: 0;
@@ -1052,7 +1208,7 @@ footer{
     100%{ transform: scale(1); 
         opacity: 1;
         }
-}
+} */
 /* @keyframes entryIndex {
     from { transform: translateY(-1500px);
             opacity: 0;
