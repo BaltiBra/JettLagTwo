@@ -692,6 +692,7 @@ body {
       padding: 1rem 0;
       background-color: #6256d1;
       font-family: 'Poppins', sans-serif;
+      border-radius: 1rem;
   }
   
   .footer-section h2 {
@@ -905,7 +906,6 @@ footer{
         grid-template-areas: 
         'form form'
         ' map map' ;
-        margin: 30px;
     }
     .maps{
         grid-area: map;
