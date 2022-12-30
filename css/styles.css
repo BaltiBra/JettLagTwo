@@ -380,13 +380,7 @@ body {
     justify-content: center;
     overflow: hidden;
 }
-.div__card__img{
-    overflow: hidden;
-    height: 100%;
-    width: 500px;
-    background-position: center;
-    background-size: cover;
-}
+
 
 .card__img{
   overflow: hidden;
