@@ -706,7 +706,6 @@ body {
     'form map'
     'form map' ;
     padding-top: 3rem;
-    background-color: rgba(0, 255, 255, 0.33);
     margin-left: 3%;
     margin-right: 3%;
     background-attachment: fixed;
@@ -781,6 +780,11 @@ body {
   border: 2px solid #2756c2a6;
   background-color: cornflowerblue;
   font-family: cursive;
+}
+
+.h1-nos{
+  font-size: 40px;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 
