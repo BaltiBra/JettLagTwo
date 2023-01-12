@@ -22,6 +22,11 @@
             padding-left: 50px;
             gap: 3rem;
         }
+        @include tablet {
+            display: grid;
+          width: 90%;
+          padding: 60px 0;
+        }
   }
   
   .ultimas__noticias--img{
@@ -29,7 +34,7 @@
     height: 90%;
         @include celular{
             display: flex;
-            width: 99%;
+            width: 70%;
             height: 90%;
         }
         @include    intermedio{
@@ -38,12 +43,11 @@
 
         }
         @include tablet{
-            width: 430px;
-            height: 520px;
+            width: 70%;
         }
   }
   
   .ultimas__noticias--title{
-    align-items: center;
+    text-align: center;
     font-family: "Comic Sans MS", sans-serif;
   }
