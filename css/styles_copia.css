@@ -1,5 +1,97 @@
 
-  
+            /* INDEX MAIN */
+/* .grid-container{
+    display: grid;
+    margin: 0px;
+    background-color: rgba(0, 255, 255, 0.33);
+    grid-template-columns: 47% 50%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    padding-top: 5rem;
+    border-radius: 10px;
+} */
+/* .cardsIndex{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 60px 0;
+    gap: 2em;
+} */
+/* .card{
+    display: flex;
+    height: 500px !important;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgb(160 181 251 / 72%) !important;
+    border: 0px solid rgba(0, 0, 0, 0) !important;
+    border-radius:0px 0px 1rem 1rem !important;
+    justify-content: center;
+    overflow: hidden;
+} */
+
+
+/* .card__img{
+  overflow: hidden;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+} */
+
+
+/* .card__cta{
+    margin-left: 2em;
+    background-color: slateblue;
+    color: white;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    width: 140px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: auto;
+} */
+/* .card__texts{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    padding: 0.4em;
+    align-items: center;
+    
+} */
+
+/* .card__btn{
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  height: 60px;
+  width: 200px;
+  background-color: #ff4654;
+  border-radius: 1em;
+  border: 2px solid #2756c2a6;
+} */
+
+/* .centrar__index{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+}
+.ultimas__noticias{
+  display: flex;
+  flex-flow: column ;
+}
+
+.ultimas__noticias--img{
+  width: 70%;
+  height: 90%;
+}
+
+.ultimas__noticias--title{
+  align-items: center;
+  font-family: "Comic Sans MS", sans-serif;
+} */
+
 /* WEB MANGAS */
 
 .div_main_mangas{
@@ -436,12 +528,110 @@ footer{
 
 /* CELULAR  */ 
 @media only screen and (min-width: 0px) and (max-width: 600px){
+    /* *{
+        margin: 0;
+        padding: 0; 
+        box-sizing: content-box;
+    }
+    .header{
+        background-color: #ff4654;
+        align-items: center;
+        height: auto;
+        padding: 0 5%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .icon-head{
+        width: 40px;
+        height: 40px;
+        justify-items: auto;
+    } */
+    
+    /* MAIN */
+    /* .grid-container{
+        display: grid;
+        margin: 0 0;
+        background-color: rgba(0, 255, 255, 0.33);
+        grid-template-columns: 98%;
+        grid-template-rows: auto auto;
+        justify-content: space-between;
+        overflow: hidden;
+    } */
+
+      /* .cardsIndex{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 0;
+        gap: 2em;
+    } */
+    /* .card{
+        padding-bottom: 2.5em;
+        display: flex;
+        height: 120px;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(247, 214, 176, 0);
+        border: 1px solid black;
+        border-radius:0px 0px 1rem 1rem !important;
+        justify-content: center;
+        overflow: hidden;
+    }
+ 
+    .card__img{
+      overflow: hidden;
+      height: 550px;
+      background-position: center;
+      background-size: cover;
+    }
+    .card__cta{
+        margin-left: 2em;
+        background-color: slateblue;
+        color: rgb(219, 23, 23);
+        text-decoration: none;
+        padding: 0.4em 1em;
+        width: 50x;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: auto;
+    } */
 
 
-  
+    .centrar__index{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      padding-left: 1rem;
+    }
+
+    .ultimas__noticias{
+      display: flex;
+      flex-flow: column ;
+    }
+    
+    .ultimas__noticias--img{
+      display: flex;
+      width: 99%;
+      height: 90%;
+    }
 
 
-  
+    /* .card__texts{
+        font-size: small;
+        padding: 0.4em;
+    } */
+    /* CONTACTO */
+    /* CONTACTOOOO */
     .conteiner_grid_contacto{
         display: grid;
         justify-content: center;
@@ -469,8 +659,66 @@ footer{
 
 
 @media only screen and (min-width: 601px) and (max-width: 780px){
-  
+  *{
+    margin: 0px;
+    padding: 0px;
+  box-sizing: content-box;   
+  }
 
+/* .header{
+    background-color: #ff4654;
+    align-items: center;
+    height: auto;
+    padding: 0 5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.icon-head{
+    width: 70px;
+    height: 70px;
+    justify-items: auto;
+} */
+
+.centrar__index{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+.ultimas__noticias{
+  display: flex;
+  flex-flow: column ;
+  width: 90%;
+  padding-left: 50px;
+  gap: 3rem;
+}
+
+
+.ultimas__noticias--img{
+  width: 70% !important;
+  height: 90% !important;
+
+}
+
+
+.nav-ul{
+    display: flex;
+    justify-content: space-between;
+}
+.li-head{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.anchor-nav{
+    text-decoration: none;
+    font-family: "Comic Sans MS", sans-serif; 
+    color: #4ac9e6; ;  
+}
 /* CONTACTOOOO */
 .conteiner_grid_contacto{
     display: grid;
@@ -494,17 +742,77 @@ footer{
     margin: 0;
     margin-bottom: 0 20px;
 }
+/* TERMINA CONTACTO*/
+/* MAIN */
+.grid-container{
+  display: grid;
+  margin: 0 0;
+  background-color: rgba(0, 255, 255, 0.33);
+  grid-template-columns: 98%;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  overflow: hidden;
+}
+/* .cardsIndex{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  gap: 2em;
+} */
 
+
+/* .card{
+    padding-bottom: 2.5em;
+    display: flex;
+    height: var(--bs-card-height) !important;
+    width: 75% !important;
+    flex-direction: column;
+    background-color: rgba(247, 214, 176, 0);
+    border: 1px solid black !important;
+    border-radius:0px 0px 1rem 1rem !important;
+    justify-content: center;
+    overflow: hidden;
+} */
+
+/* .card__img{
+  overflow: hidden;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+}
+.card__cta{
+    margin-left: 2em;
+    background-color: slateblue;
+    color: rgb(219, 23, 23);
+    text-decoration: none;
+    padding: 0.4em 1em;
+    width: 50x;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: auto;
+}
+.card__texts{
+    font-size: small;
+    padding: 0.4em;
+} */
+}
 
 
     /* TABLET */
     @media only screen and (min-width: 781px) and (max-width: 1199px){
-      *{
+      /* *{
           margin: 0;
           padding: 0; 
           box-sizing: content-box;
       }
-      /* .header{
+      .header{
           background-color: #ff4654;
           align-items: center;
           height: auto;
@@ -513,32 +821,46 @@ footer{
           display: flex;
           justify-content: space-between;
           flex-direction: row;
-      }
+      } */
       .icon-head{
           width: 70px;
           height: 70px;
           justify-items: auto;
-      } */
+      }
   
-      /* .centrar__index{
+      .centrar__index{
         display: flex;
         flex-flow: column;
         align-items: center;
         padding-top: 1rem;
-      } */
-      /* .ultimas__noticias{
+      }
+      .ultimas__noticias{
         display: flex;
         flex-flow: column ;
-      } */
+      }
       
   
-      /* .ultimas__noticias--img{
+      .ultimas__noticias--img{
         width: 430px;
         height: 520px;
-      } */
+      }
   
   
-      
+      .nav-ul{
+          display: flex;
+          justify-content: space-between;
+      }
+      .li-head{
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          margin: 5px;
+      }
+      .anchor-nav{
+          text-decoration: none;
+          font-family: "Comic Sans MS", sans-serif; 
+          color: #4ac9e6; ;  
+      }
       /* CONTACTOOOO */
       .conteiner_grid_contacto{
           display: grid;
@@ -573,12 +895,7 @@ footer{
           justify-content: space-between;
           overflow: hidden; */
       }
-      .ultimas_noticias{
-          display: grid;
-          width: 90%;
-          padding: 60px 0;
-      }
-     
+      
       /* .cards{
           width: 90%;
           max-width: 1200px;
