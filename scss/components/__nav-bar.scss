@@ -5,7 +5,69 @@
     height: 110px;
     width: 110px;
     float: left;
+		@include celular {
+			
+				width: 40px;
+				height: 40px;
+				justify-items: auto;
+			}
+		
+		@include intermedio{
+			
+				width: 70px;
+				height: 70px;
+				justify-items: auto;
+			}
+		
+		@include tablet{
+			
+				width: 70px;
+				height: 70px;
+				justify-items: auto;
+			}
+		
+		}
+
+@include celular {
+		.header{
+		background-color: #ff4654;
+		align-items: center;
+		height: auto;
+		padding: 0 5%;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
 }
+
+@include intermedio{
+	.header{
+		background-color: #ff4654;
+		align-items: center;
+		height: auto;
+		padding: 0 5%;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+}
+
+@include tablet {
+	.header{
+		background-color: #ff4654;
+		align-items: center;
+		height: auto;
+		padding: 0 5%;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+	}
+}
+
+
 
 .site-navbar {
 

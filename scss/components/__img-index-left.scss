@@ -1,0 +1,49 @@
+.centrar__index{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 1rem;
+        @include celular {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+        }
+        @include intermedio {
+            padding-top: 1rem;
+            gap: 1rem;
+        }
+    }
+  
+  .ultimas__noticias{
+    display: flex;
+    flex-flow: column ;
+        @include intermedio {
+            width: 90%;
+            padding-left: 50px;
+            gap: 3rem;
+        }
+  }
+  
+  .ultimas__noticias--img{
+    width: 70%;
+    height: 90%;
+        @include celular{
+            display: flex;
+            width: 99%;
+            height: 90%;
+        }
+        @include    intermedio{
+            width: 70% !important;
+            height: 90% !important;
+
+        }
+        @include tablet{
+            width: 430px;
+            height: 520px;
+        }
+  }
+  
+  .ultimas__noticias--title{
+    align-items: center;
+    font-family: "Comic Sans MS", sans-serif;
+  }
