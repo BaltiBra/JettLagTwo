@@ -1,0 +1,48 @@
+
+$color-fondo: rgba(0, 255, 255, 0.33);
+
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+
+@import "./utils/variables";
+@import "./utils/mixin";
+
+@import "./base/base";
+
+@import "./components/_nav-bar";
+@import "./components/_tarjeta-noticias";
+@import "./components/_tarjeta-novedades";
+
+@import "./pages/index";
+@import "./pages/comics";
+@import "./pages/mangas";
+@import "./pages/merchandaising";
+@import "./pages/contacto";
+
+
+
+
+// INDEX MAIN 
+
+.grid-container{
+    display: grid;
+    margin: 0px;
+    background-color: $color-fondo;
+    grid-template-columns: 47% 50%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    padding-top: 5rem;
+    border-radius: 10px;
+}
+.cardsIndex{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 60px 0;
+    gap: 2em;
+}
