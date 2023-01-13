@@ -1,0 +1,39 @@
+.maps{
+    grid-area: map;
+    width: 500px;
+    height: 500px;
+    padding-top: 30px;
+}
+
+@include celular{
+    .maps{
+        grid-area: map;
+        display: flex;
+        width: 400px;
+        height: 400px;
+        margin: 20px;
+        margin-top: 0 80px;
+    }
+}
+
+@include intermedio{
+    .maps{
+        grid-area: map;
+        display: flex;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+        margin-top: 0 80px;
+    }
+}
+
+@include tablet{
+    .maps{
+        grid-area: map;
+        display: flex;
+        width: 500px;
+        height: 500px;
+        margin: 20px;
+        margin-top: 0 80px;
+    }
+}

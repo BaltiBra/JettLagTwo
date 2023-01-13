@@ -1,0 +1,108 @@
+.cardComics {
+
+    transform: translate(0%,0%);
+    width: 260px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0);
+    justify-content: space-between;
+    margin: 1rem;
+    overflow: hidden;
+
+        .cardComics__image{
+            width: 100%;
+            height: 100%;
+
+            .cardComics__image__img{
+                width: 100%;
+                transition: .5s;
+            }
+          
+        }
+        &:hover{
+            .cardComics__image{
+                .cardComics__image__img{
+                    opacity: 0.5;
+                    transform: translateX(0%);/*100%*/
+                }
+            }
+        }
+        .cardComics__details{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 70%;/*100%*/
+            height: 100%;
+            background: #ff4656c0;
+            transition: .5s;
+            transform-origin: left;
+            transform: perspective(2000px) rotateY(-90deg);
+            overflow: auto;
+        }
+        &:hover{
+            .cardComics__details{
+                transform: perspective(2000px) rotateY(0deg);
+                overflow-y: auto;
+                }
+            }
+            
+            .cardComics__details{
+                .cardComics__details__center{
+                    padding: 20px;
+                    /* text-align: center; */
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 80%;
+                    overflow: auto;
+
+                    h4{
+                        margin: 0;
+                        padding: 0;
+                        color: #ff3636;
+                        line-height: 20px;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+                
+                    h1 span{
+                        font-size: 14px;
+                        color: #262626;
+                    }
+
+                    p{
+                        padding: 0;
+                        color: #262626;
+                    }
+
+                    ul{
+                        margin: 10px auto 0;
+                        padding: 0;
+                        display: table;
+                    }
+
+                    ul li{
+                        list-style: none;
+                        margin: 0 5px;
+                        float: left;
+                    }
+
+                    ul li a{
+                        display: block;
+                        background: #262626;
+                        color: #fff;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        /* text-align: center; */
+                        transform: .5s;
+                    }
+
+                    ul li a:hover{
+                        background: #ff3636;
+                    }
+                } 
+            
+            }
+       
+  }

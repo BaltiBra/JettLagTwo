@@ -1,0 +1,43 @@
+.conteiner_grid_contacto{
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    'form map'
+    'form map' ;
+    padding-top: 3rem;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-attachment: fixed;
+    background-size: auto;
+    border-radius: 10px;
+    justify-content: space-around;
+
+    @include celular{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'form form'
+        ' map map' ;
+    }
+
+    @include intermedio{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'form form'
+        ' map map' ;
+    }
+
+    @include tablet{
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'form form'
+        ' map map' ;
+    }
+}
+
+.h1-nos{
+    font-size: 40px;
+    font-family: "Comic Sans MS", sans-serif;
+  }

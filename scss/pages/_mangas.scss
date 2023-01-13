@@ -6,3 +6,27 @@
     justify-content: space-around;
     gap: 3rem;
   }
+
+  .section-mangas{
+    gap: 3rem;
+  }
+
+  .div-ibrea{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .h3-mangas{
+    font-size: large;
+    color: #6256d1;
+    
+  }
+
+  .h4-mangas{
+    border: 2px $color-rojo;
+    padding: 3px;
+    border-radius: 20px;
+    font-size: medium !important;
+  }
