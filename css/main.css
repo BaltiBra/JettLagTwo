@@ -118,6 +118,7 @@ a, a:hover {
   position: absolute;
   top: 2rem;
   width: 100%;
+  background-color: #ff4654;
 }
 .site-navbar.transparent {
   background: transparent;
