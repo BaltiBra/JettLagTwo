@@ -5,6 +5,10 @@
     box-sizing: border-box;
 
 }
+.borde{
+  border: 1px solid rgb(175 13 13) !important;
+  
+}
 body {
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #fff;
@@ -1157,6 +1161,7 @@ footer{
     background-size: cover;
     border-radius: 1em 1em 0 0;
 }
+
 .card__img{
   overflow: hidden;
   height: 450px;
