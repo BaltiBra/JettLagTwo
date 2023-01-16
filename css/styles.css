@@ -54,21 +54,21 @@ a, a:hover {
   width: 110px;
   float: left;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .icon-logo {
     width: 120px;
     height: 120px;
     justify-items: auto;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .icon-logo {
     width: 120px;
     height: 120px;
     justify-items: auto;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .icon-logo {
     width: 120px;
     height: 120px;
@@ -76,7 +76,7 @@ a, a:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .header {
     background-color: #ff4654;
     align-items: center;
@@ -88,7 +88,7 @@ a, a:hover {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .header {
     background-color: #ff4654;
     align-items: center;
@@ -100,7 +100,7 @@ a, a:hover {
     flex-direction: row;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .header {
     background-color: #ff4654;
     align-items: center;
@@ -439,14 +439,14 @@ a, a:hover {
   align-items: center;
   padding-top: 1rem;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .centrar__index {
     padding-top: 1rem;
     padding-bottom: 2rem;
     padding-left: 1rem;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .centrar__index {
     padding-top: 1rem;
     gap: 1rem;
@@ -457,14 +457,14 @@ a, a:hover {
   display: flex;
   flex-flow: column;
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .ultimas__noticias {
     width: 90%;
     padding-left: 50px;
     gap: 3rem;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .ultimas__noticias {
     display: grid;
     width: 90%;
@@ -476,20 +476,20 @@ a, a:hover {
   width: 70%;
   height: 90%;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .ultimas__noticias--img {
     display: flex;
     width: 70%;
     height: 90%;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .ultimas__noticias--img {
     width: 70% !important;
     height: 90% !important;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .ultimas__noticias--img {
     width: 70%;
   }
@@ -557,7 +557,7 @@ a, a:hover {
   text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .cardsIndex {
     display: flex;
     flex-flow: column;
@@ -605,7 +605,7 @@ a, a:hover {
     padding: 0.4em;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .cardsIndex {
     display: flex;
     flex-flow: column;
@@ -653,7 +653,7 @@ a, a:hover {
     padding: 0.4em;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .cards {
     width: 90%;
     max-width: 1200px;
@@ -1008,7 +1008,7 @@ a, a:hover {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .maps {
     grid-area: map;
     display: flex;
@@ -1018,7 +1018,7 @@ a, a:hover {
     margin-top: 0 80px;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .maps {
     grid-area: map;
     display: flex;
@@ -1028,7 +1028,7 @@ a, a:hover {
     margin-top: 0 80px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .maps {
     grid-area: map;
     display: flex;
@@ -1049,7 +1049,7 @@ a, a:hover {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .grid-container {
     display: grid;
     margin: 0 0;
@@ -1060,7 +1060,7 @@ a, a:hover {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .grid-container {
     display: grid;
     margin: 0 0;
@@ -1071,7 +1071,7 @@ a, a:hover {
     overflow: hidden;
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .grid-container {
     display: grid;
     margin: 0 0;
@@ -1150,21 +1150,21 @@ a, a:hover {
   border-radius: 10px;
   justify-content: space-around;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 0px) and (max-width: 600px) {
   .conteiner_grid_contacto {
     display: grid;
     justify-content: center;
     grid-template-areas: "form form" " map map";
   }
 }
-@media screen and (max-width: 780px) {
+@media only screen and (min-width: 601px) and (max-width: 780px) {
   .conteiner_grid_contacto {
     display: grid;
     justify-content: center;
     grid-template-areas: "form form" " map map";
   }
 }
-@media screen and (max-width: 1199px) {
+@media only screen and (min-width: 781px) and (max-width: 1199px) {
   .conteiner_grid_contacto {
     display: grid;
     justify-content: center;

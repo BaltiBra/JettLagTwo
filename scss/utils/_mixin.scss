@@ -1,17 +1,18 @@
 @mixin celular {
-    @media screen and (max-width: 600px) {
+    @media only screen and (min-width:0px) and (max-width: 600px) {
         @content;
     }
 }
 
 @mixin intermedio {
-    @media screen and (max-width: 780px) {
+    @media only screen and (min-width:601px) and (max-width: 780px) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media screen and (max-width: 1199px) {
+    @media only screen and (min-width:781px) and (max-width: 1199px) {
         @content;
     }
 }
+
