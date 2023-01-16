@@ -1054,7 +1054,7 @@ a, a:hover {
     display: grid;
     margin: 0 0;
     background-color: rgba(0, 255, 255, 0.33);
-    grid-template-columns: 98%;
+    grid-template-columns: 98% !important;
     grid-template-rows: auto auto;
     justify-content: space-between;
     overflow: hidden;
@@ -1065,7 +1065,7 @@ a, a:hover {
     display: grid;
     margin: 0 0;
     background-color: rgba(0, 255, 255, 0.33);
-    grid-template-columns: 98%;
+    grid-template-columns: 98% !important;
     grid-template-rows: auto auto;
     justify-content: space-between;
     overflow: hidden;
@@ -1076,7 +1076,7 @@ a, a:hover {
     display: grid;
     margin: 0 0;
     background-color: rgba(0, 255, 255, 0.33);
-    grid-template-columns: 51% 50%;
+    grid-template-columns: 51% 50% !important;
     grid-template-rows: auto auto;
     justify-content: space-between;
     overflow: hidden;
