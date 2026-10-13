@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_todelete/
+
+Sitemap: https://jett-lag-two.vercel.app/sitemap.xml
