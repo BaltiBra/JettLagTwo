@@ -1,0 +1,800 @@
+/* ============================================================
+   JettLag Comics – Identidad visual y layout
+   ------------------------------------------------------------
+   Se carga DESPUÉS de styles.css en todas las páginas.
+   Para cambiar colores, tipografía o espaciados, tocá solo :root.
+
+   Paleta (inspirada en tiendas de comics/manga argentinas):
+     tinta     #1F3448  títulos, footer, texto fuerte
+     texto     #2C3E50  texto de párrafos
+     apagado   #5D6F80  datos secundarios (autor, tomo)
+     azul      #1E5F99  navegación, links, títulos de card
+     naranja   #F39C12  botones de acción y etiquetas
+     borde     #E3E8EE  líneas y bordes de tarjetas
+   Todos los pares texto/fondo cumplen contraste WCAG AA (≥ 4.5:1).
+
+   Tipografía: Poppins (Google Fonts).
+   ============================================================ */
+
+:root {
+  --jl-ink: #1f3448;
+  --jl-text: #2c3e50;
+  --jl-muted: #5d6f80;
+  --jl-primary: #1e5f99;
+  --jl-primary-dark: #174b7a;
+  --jl-accent: #f39c12;
+  --jl-accent-hover: #ffb23f;
+  --jl-bg: #f6f8fa;
+  --jl-surface: #ffffff;
+  --jl-border: #e3e8ee;
+
+  --jl-radius: 8px;
+  --jl-shadow-hover: 0 6px 16px rgba(31, 52, 72, 0.1);
+  --jl-font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --jl-content: 1140px;   /* ancho máximo del contenido */
+  --jl-gap: 1.25rem;      /* separación entre tarjetas */
+  --jl-section: 3rem;     /* separación entre secciones */
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+body {
+  font-family: var(--jl-font);
+  font-size: 0.95rem;
+  color: var(--jl-text);
+  background-color: var(--jl-surface);
+  height: auto;          /* styles.css tenía 200vh y dejaba espacio vacío */
+  min-height: 100vh;
+  overflow-x: clip;      /* evita scroll horizontal sin romper el header sticky */
+}
+
+p {
+  color: var(--jl-text);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--jl-font);
+  color: var(--jl-ink);
+}
+
+a {
+  color: var(--jl-primary);
+}
+a:hover {
+  color: var(--jl-primary-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--jl-accent);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Contenedor de todas las páginas */
+main.home,
+main.catalogo {
+  max-width: var(--jl-content);
+  margin: 0 auto;
+  padding: 2rem 0 var(--jl-section);
+}
+
+main.home > section + section,
+main.catalogo > section + section {
+  margin-top: var(--jl-section);
+}
+
+/* ============================================================
+   Títulos
+   ============================================================ */
+.page-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--jl-ink);
+}
+
+.page-subtitle {
+  margin: 0.35rem 0 2rem;
+  color: var(--jl-muted);
+  font-size: 0.95rem;
+}
+
+/* Título de sección: texto chico en mayúsculas + línea fina */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--jl-ink);
+}
+.section-title::before {
+  content: "";
+  width: 1.25rem;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--jl-accent);
+}
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--jl-border);
+}
+
+/* ============================================================
+   Header / navegación
+   ============================================================ */
+.site-navbar {
+  background-color: var(--jl-surface);
+  border-bottom: 1px solid var(--jl-border);
+  border-radius: 0;
+  box-shadow: none;
+  padding-block: 0.4rem;
+}
+
+.icon-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+
+.site-navbar .site-navigation .site-menu > li > a {
+  padding: 0;
+  color: var(--jl-ink);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.site-navbar .site-navigation .site-menu > li > a > span {
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+}
+.site-navbar .site-navigation .site-menu > li > a:hover > span,
+.site-navbar .site-navigation .site-menu > li > a:focus-visible > span {
+  background: var(--jl-bg);
+  color: var(--jl-primary);
+}
+.site-navbar .site-navigation .site-menu .active > a span {
+  background: transparent;
+  color: var(--jl-primary);
+  box-shadow: inset 0 -2px 0 var(--jl-accent);
+  border-radius: 0;
+}
+
+.site-navbar .site-menu-toggle,
+.site-navbar .site-menu-toggle.text-white {
+  color: var(--jl-ink) !important;
+}
+.site-navbar .site-menu-toggle .h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.site-mobile-menu {
+  background: var(--jl-surface);
+}
+.site-mobile-menu .site-nav-wrap > li > a {
+  color: var(--jl-ink);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.site-mobile-menu .site-nav-wrap a:hover,
+.site-mobile-menu .site-nav-wrap li.active > a {
+  color: var(--jl-primary);
+}
+
+/* ============================================================
+   Inicio: novedades
+   ============================================================ */
+.novedades {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 6 columnas en escritorio, 3 en tablet, 2 en celular */
+.novedades__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--jl-gap);
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .novedades__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1100px) {
+  .novedades__grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+.novedad {
+  border-color: var(--jl-border);
+  border-radius: var(--jl-radius);
+  box-shadow: none;
+}
+.novedad:hover,
+.novedad:focus-within {
+  transform: translateY(-2px);
+  box-shadow: var(--jl-shadow-hover);
+}
+.novedad__fecha {
+  top: 0.45rem;
+  left: 0.45rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.65rem;
+}
+.novedad__body {
+  gap: 0.2rem;
+  padding: 0.75rem;
+}
+.novedad__title {
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+.novedad__meta {
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+.novedad__desc {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  margin-top: 0.2rem;
+}
+/* precio arriba, botón a todo el ancho */
+.novedad__footer {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  padding-top: 0.6rem;
+}
+.novedad__precio {
+  font-size: 1rem;
+}
+.novedad__btn {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.72rem;
+  text-align: center;
+}
+
+/* ============================================================
+   Inicio: flyers de próximamente/encargos
+   ============================================================ */
+.flyers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--jl-gap);
+  max-width: 860px;
+}
+.flyer {
+  margin: 0;
+}
+.flyer__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border: 1px solid var(--jl-border);
+  border-radius: var(--jl-radius);
+}
+/* En celular los flyers se deslizan de costado */
+@media (max-width: 575.98px) {
+  .flyers {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 68%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+  }
+  .flyer {
+    scroll-snap-align: start;
+  }
+}
+
+/* ============================================================
+   Inicio: Instagram
+   ============================================================ */
+.instagram__embed {
+  max-width: 400px;
+}
+.instagram__embed .instagram-media {
+  min-width: 0 !important;
+  border: 1px solid var(--jl-border) !important;
+  box-shadow: none !important;
+  border-radius: var(--jl-radius) !important;
+}
+
+/* ============================================================
+   Mangas: listado en columnas
+   ============================================================ */
+.manga-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 3 240px;
+  column-gap: 2.5rem;
+}
+.manga-list__item {
+  break-inside: avoid;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--jl-border);
+  line-height: 1.3;
+}
+.manga-list__title {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--jl-ink);
+}
+.manga-list__author {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--jl-muted);
+}
+
+/* ============================================================
+   Comics: grilla de tapas
+   ============================================================ */
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--jl-gap);
+}
+.cardComics {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--jl-border);
+  border-radius: var(--jl-radius);
+}
+.cardComics .cardComics__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+.cardComics .cardComics__details {
+  width: 100%;
+  background: rgba(31, 52, 72, 0.55);
+}
+.cardComics .cardComics__details .cardComics__details__center {
+  inset: 0.5rem;
+  top: 0.5rem;
+  height: auto;
+  transform: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+}
+.cardComics .cardComics__details .cardComics__details__center h4 {
+  margin-bottom: 0.4rem;
+  color: var(--jl-primary);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.cardComics .cardComics__details .cardComics__details__center h4 span {
+  color: var(--jl-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.cardComics .cardComics__details .cardComics__details__center p {
+  color: var(--jl-text);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   Merchandising: grilla de productos
+   ============================================================ */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--jl-gap);
+}
+@media (min-width: 768px) {
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px) {
+  .product-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--jl-font);
+  background: var(--jl-surface);
+  border: 1px solid var(--jl-border);
+  border-radius: var(--jl-radius);
+  box-shadow: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.item-container:hover,
+.item-container:focus-within {
+  box-shadow: var(--jl-shadow-hover);
+  transform: translateY(-2px);
+}
+.main-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.item-heading {
+  margin: 0.7rem 0.75rem 0;
+  font-family: var(--jl-font) !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--jl-ink);
+}
+.item-description {
+  margin: 0.15rem 0.75rem 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--jl-muted);
+}
+.item-price {
+  margin: auto 0.75rem 0;
+  padding-top: 0.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--jl-ink);
+}
+.item-cart-btn {
+  display: block;
+  width: auto;
+  margin: 0.5rem 0.75rem 0.75rem;
+  padding: 0.4rem 0.5rem;
+  font-family: var(--jl-font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--jl-ink);
+  background-color: var(--jl-accent);
+  border-radius: 6px;
+}
+.item-cart-btn:hover,
+.item-cart-btn:focus-visible {
+  color: var(--jl-ink);
+  background-color: var(--jl-accent-hover);
+}
+
+/* ============================================================
+   Contacto
+   ============================================================ */
+.contacto__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  margin: -1rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--jl-text);
+}
+.contacto__info strong {
+  color: var(--jl-ink);
+  font-weight: 600;
+}
+
+.contacto__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  .contacto__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+}
+
+.contacto__form .form {
+  width: 100%;
+  min-width: 0;
+  max-height: none;
+  margin: 0;
+  padding: 1.5rem;
+  color: var(--jl-text);
+  background: var(--jl-surface);
+  border: 1px solid var(--jl-border);
+  border-radius: var(--jl-radius);
+}
+.contacto__form .header-form h2 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--jl-ink);
+}
+.form_label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--jl-ink);
+}
+.contacto__form .form_input,
+.contacto__form .form_text {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.9rem;
+  padding: 0.55rem 0.7rem;
+  font-family: var(--jl-font);
+  font-size: 0.9rem;
+  color: var(--jl-text);
+  background: var(--jl-surface);
+  border: 1px solid var(--jl-border);
+  border-radius: 6px;
+}
+.contacto__form .form_input:focus,
+.contacto__form .form_text:focus {
+  border-color: var(--jl-primary);
+}
+.contacto__form .form_text::placeholder {
+  font-size: inherit;
+}
+.enviar {
+  padding: 0.5rem 1.4rem;
+  font-family: var(--jl-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--jl-ink);
+  background-color: var(--jl-accent);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.enviar:hover {
+  background-color: var(--jl-accent-hover);
+}
+
+.contacto__mapa .maps {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--jl-border) !important;
+  border-radius: var(--jl-radius);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.footer-section {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem 3rem;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  font-family: var(--jl-font);
+  background-color: var(--jl-ink);
+  border-radius: var(--jl-radius) var(--jl-radius) 0 0;
+}
+.footer-item {
+  margin: 0;
+}
+.footer-section h2 {
+  margin-bottom: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer-section h2::after {
+  position: static;
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  margin-top: 0.35rem;
+  background: var(--jl-accent);
+}
+.footer-section p {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  color: #fff;
+}
+.footer-item ul {
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.footer-item li {
+  margin: 0;
+}
+.footer-section h5 {
+  margin: 0.75rem 0 0;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-anchor {
+  color: #fff;
+}
+.footer-section a:hover,
+.footer-section a:focus-visible {
+  color: var(--jl-accent);
+}
+
+/* ============================================================
+   Movimiento reducido
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .novedad,
+  .item-container,
+  .cardComics .cardComics__image img,
+  .cardComics .cardComics__details {
+    transition: none;
+  }
+  .novedad:hover,
+  .novedad:focus-within,
+  .item-container:hover,
+  .item-container:focus-within {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Ajustes de layout
+   ============================================================ */
+/* Inicio: flyers a la izquierda, Instagram a la derecha */
+.home__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--jl-section) 2.5rem;
+  margin-top: var(--jl-section);
+}
+@media (min-width: 992px) {
+  .home__row { grid-template-columns: minmax(0, 1fr) 340px; }
+}
+.home__row .flyers {
+  max-width: none;
+}
+.home__row .instagram__embed {
+  max-width: 400px;
+}
+
+/* Footer alineado con el ancho del contenido */
+.footer-section {
+  padding-inline: max(1.25rem, calc((100% - var(--jl-content)) / 2));
+}
+
+/* Botón para cerrar el menú móvil (antes era un ícono de icomoon) */
+.site-mobile-menu-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  font-size: 1.4rem;
+  color: var(--jl-ink);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.site-mobile-menu-close-btn:hover {
+  background: var(--jl-bg);
+}
+
+/* Botón hamburguesa: área táctil mínima de 44px aunque el ícono no cargue */
+.site-navbar .site-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  font-size: 1.3rem;
+  border-radius: 6px;
+}
+.site-navbar .site-menu-toggle:hover {
+  background: var(--jl-bg);
+}
+
+/* ============================================================
+   Accesibilidad y SEO (paso 5)
+   ============================================================ */
+/* Link "Saltar al contenido": invisible hasta que se navega con teclado */
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 3000;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--jl-ink);
+  background: var(--jl-accent);
+  border-radius: 6px;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  color: var(--jl-ink);
+}
+main:focus {
+  outline: none;
+}
+
+.site-logo-link {
+  display: inline-block;
+  border-radius: 50%;
+}
+.site-logo-link .icon-logo {
+  display: block;
+}
+
+/* Títulos de las tapas de comics (antes eran h4 sueltos) */
+.cardComics .cardComics__details .cardComics__details__center .comic-title {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--jl-primary);
+}
+.comic-title__sub {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: none;
+  color: var(--jl-muted);
+}
+
+.footer-legal {
+  margin: 0.75rem 0 0;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link { transition: none; }
+}
+
+/* Links dentro de un texto: subrayados para distinguirlos sin depender del color */
+.page-subtitle a,
+.novedades__noscript a {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
+/* Tarjeta provisoria de Instagram (antes de que cargue el embed):
+   sus colores originales no tienen contraste suficiente */
+.instagram__embed .instagram-media div[style*="#3897f0"] {
+  color: var(--jl-primary) !important;
+}
+.instagram__embed .instagram-media p a {
+  color: var(--jl-muted) !important;
+}

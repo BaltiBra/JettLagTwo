@@ -1,87 +1,75 @@
-$(function() {
+/*
+ * Menú móvil (sin jQuery)
+ * ------------------------------------------------------------
+ * Copia el menú del header dentro del panel lateral y lo abre o
+ * cierra con el botón hamburguesa, la X, un clic afuera o Escape.
+ */
+(function menuMovil() {
+  const body = document.body;
+  const panel = document.querySelector('.site-mobile-menu');
+  const destino = document.querySelector('.site-mobile-menu-body');
+  const toggles = document.querySelectorAll('.js-menu-toggle');
+  const ABIERTO = 'offcanvas-menu';
+  const ANCHO_ESCRITORIO = 1200; // coincide con d-xl-none del botón
 
-  var siteSticky = function() {
-		$(".js-sticky-header").sticky({topSpacing:0});
-	};
-	siteSticky();
+  if (!panel || !destino) return;
 
-	var siteMenuClone = function() {
+  // 1. Clonar el menú de escritorio dentro del panel
+  document.querySelectorAll('.js-clone-nav').forEach((nav) => {
+    const copia = nav.cloneNode(true);
+    copia.className = 'site-nav-wrap';
+    copia.removeAttribute('id');
+    destino.appendChild(copia);
+  });
 
-		$('.js-clone-nav').each(function() {
-			var $this = $(this);
-			$this.clone().attr('class', 'site-nav-wrap').appendTo('.site-mobile-menu-body');
-		});
+  panel.id = panel.id || 'menu-movil';
+  panel.setAttribute('aria-label', 'Menú');
 
+  const abierto = () => body.classList.contains(ABIERTO);
 
-		setTimeout(function() {
-			
-			var counter = 0;
-      $('.site-mobile-menu .has-children').each(function(){
-        var $this = $(this);
-        
-        $this.prepend('<span class="arrow-collapse collapsed">');
-
-        $this.find('.arrow-collapse').attr({
-          'data-toggle' : 'collapse',
-          'data-target' : '#collapseItem' + counter,
-        });
-
-        $this.find('> ul').attr({
-          'class' : 'collapse',
-          'id' : 'collapseItem' + counter,
-        });
-
-        counter++;
-
-      });
-
-    }, 1000);
-
-		$('body').on('click', '.arrow-collapse', function(e) {
-      var $this = $(this);
-      if ( $this.closest('li').find('.collapse').hasClass('show') ) {
-        $this.removeClass('active');
-      } else {
-        $this.addClass('active');
+  const setEstado = (abrir) => {
+    body.classList.toggle(ABIERTO, abrir);
+    panel.toggleAttribute('inert', !abrir);
+    toggles.forEach((t) => {
+      t.classList.toggle('active', abrir);
+      if (t.tagName === 'A' || t.tagName === 'BUTTON') {
+        t.setAttribute('aria-expanded', String(abrir));
+        t.setAttribute('aria-controls', panel.id);
       }
-      e.preventDefault();  
-      
     });
+    if (abrir) {
+      const primerLink = panel.querySelector('.site-nav-wrap a');
+      if (primerLink) primerLink.focus();
+    }
+  };
 
-		$(window).resize(function() {
-			var $this = $(this),
-				w = $this.width();
+  setEstado(false);
 
-			if ( w > 768 ) {
-				if ( $('body').hasClass('offcanvas-menu') ) {
-					$('body').removeClass('offcanvas-menu');
-				}
-			}
-		})
+  // 2. Botón hamburguesa y X
+  toggles.forEach((t) => {
+    t.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setEstado(!abierto());
+    });
+  });
 
-		$('body').on('click', '.js-menu-toggle', function(e) {
-			var $this = $(this);
-			e.preventDefault();
+  // 3. Clic afuera del panel
+  document.addEventListener('click', (e) => {
+    if (abierto() && !panel.contains(e.target)) setEstado(false);
+  });
 
-			if ( $('body').hasClass('offcanvas-menu') ) {
-				$('body').removeClass('offcanvas-menu');
-				$this.removeClass('active');
-			} else {
-				$('body').addClass('offcanvas-menu');
-				$this.addClass('active');
-			}
-		}) 
+  // 4. Tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && abierto()) {
+      setEstado(false);
+      const boton = document.querySelector('.site-menu-toggle');
+      if (boton) boton.focus();
+    }
+  });
 
-		// click outisde offcanvas
-		$(document).mouseup(function(e) {
-	    var container = $(".site-mobile-menu");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-	      if ( $('body').hasClass('offcanvas-menu') ) {
-					$('body').removeClass('offcanvas-menu');
-				}
-	    }
-		});
-	}; 
-	siteMenuClone();
-
-});
+  // 5. Al agrandar la ventana a tamaño escritorio, cerrar el panel
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= ANCHO_ESCRITORIO && abierto()) setEstado(false);
+  });
+})();
